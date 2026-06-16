@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EntropyOS | Infiposts</title>
+    <meta name="description" content="EntropyOS is Infiposts' AI-native operating system that turns natural language into actions across your workspace.">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.classList.add(savedTheme + '-theme');
+        })();
+    </script>
+</head>
+<body>
+    <div class="grid-overlay"></div>
+    <div class="glow-container">
+        <div class="glow-spot glow-green" id="glow-hero"></div>
+        <div class="glow-spot glow-blue" id="glow-binary-section"></div>
+
+    </div>
+
+    <nav class="navbar" id="nav-bar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand" id="brand-logo">
+                <img src="assets/logo.png" alt="Infiposts Logo" class="brand-logo-img">
+            </a>
+            <div class="nav-links" id="navbar-links">
+                <a href="index.html" class="nav-link-item">HOME</a>
+                <a href="index.html#entropyos" class="nav-link-item">ENTROPYOS</a>
+                <a href="index.html#binary" class="nav-link-item">BINARY</a>
+            </div>
+
+            <div class="nav-right-container">
+                <button id="theme-toggle-btn" class="theme-toggle-premium" aria-label="Toggle theme" title="Switch theme" type="button">
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/>
+                    </svg>
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                </button>
+                <button class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="product-detail-page">
+        <section class="product-detail-hero container">
+            <div class="product-detail-badge">AI-NATIVE OPERATING SYSTEM</div>
+            <h1 class="product-detail-title">EntropyOS</h1>
+            <p class="product-detail-subtitle">The AI-Native Operating System</p>
+            <p class="product-detail-description">
+                EntropyOS translates natural language into coordinated actions across your files, projects, communications, and automation tools. It removes the friction of command-based computing and turns every workspace into an intelligent operating layer.
+            </p>
+            <div class="product-detail-pills">
+                <span>Natural language control</span>
+                <span>Autonomous task execution</span>
+                <span>Local-first security</span>
+            </div>
+        </section>
+
+        <section class="product-detail-section container">
+            <div class="section-heading">
+                <span class="section-tag">PRODUCT VISION</span>
+                <h2 class="section-title">Computing that understands intent, not syntax.</h2>
+            </div>
+            <div class="detail-grid">
+                <article class="detail-card">
+                    <h3>AI-first computing</h3>
+                    <p>EntropyOS brings intelligence directly into the operating experience so users can describe outcomes instead of learning procedural commands.</p>
+                </article>
+                <article class="detail-card">
+                    <h3>Natural language interaction</h3>
+                    <p>Everyday language becomes the interface for creating files, generating drafts, summarizing data, and launching automations.</p>
+                </article>
+                <article class="detail-card">
+                    <h3>Autonomous task execution</h3>
+                    <p>The system plans, delegates, and completes multi-step tasks using workspace context, local files, and connected services.</p>
+                </article>
+                <article class="detail-card">
+                    <h3>Human-centric operating system</h3>
+                    <p>EntropyOS is designed to feel like an attentive collaborator that handles complexity while preserving user control.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="product-detail-section container">
+            <div class="section-heading">
+                <span class="section-tag">HOW IT WORKS</span>
+                <h2 class="section-title">From request to execution in a fluent workflow.</h2>
+            </div>
+            <div class="architecture-flow reveal reveal-scale">
+                <div class="arch-node"><strong>Remote Device</strong><span>Context and runtime</span></div>
+                <svg class="arch-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M14 6l6 6-6 6"/></svg>
+                <div class="arch-node"><strong>Streaming</strong><span>Live signal intake</span></div>
+                <svg class="arch-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M14 6l6 6-6 6"/></svg>
+                <div class="arch-node"><strong>Command</strong><span>Action orchestration</span></div>
+                <svg class="arch-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M14 6l6 6-6 6"/></svg>
+                <div class="arch-node"><strong>AI Agent</strong><span>Reasoning and planning</span></div>
+                <svg class="arch-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M14 6l6 6-6 6"/></svg>
+                <div class="arch-node"><strong>Execution</strong><span>Outcome delivery</span></div>
+            </div>
+        </section>
+
+        <section class="product-detail-section container">
+            <div class="section-heading">
+                <span class="section-tag">INTERACTIVE WORKSPACE DEMO</span>
+                <h2 class="section-title">A workspace that behaves like a real operating layer.</h2>
+            </div>
+            <div class="product-live-demo reveal reveal-scale">
+                <div class="entropy-workflow-demo" id="entropy-workflow-demo">
+                    <!-- Header bar -->
+                    <div class="ewd-header">
+                        <div class="ewd-dots"><span></span><span></span><span></span></div>
+                        <div class="ewd-title">EntropyOS — Workspace</div>
+                        <div class="ewd-status"><span class="ewd-status-dot"></span>Active</div>
+                    </div>
+                    <!-- User prompt -->
+                    <div class="ewd-prompt-row">
+                        <div class="ewd-prompt-label">USER REQUEST</div>
+                        <div class="ewd-prompt-text" id="ewd-prompt-text"></div>
+                        <div class="ewd-prompt-cursor" id="ewd-prompt-cursor"></div>
+                    </div>
+                    <!-- Steps container -->
+                    <div class="ewd-steps" id="ewd-steps">
+                        <!-- steps injected by JS -->
+                    </div>
+                    <!-- Output panel -->
+                    <div class="ewd-output" id="ewd-output" style="display:none;">
+                        <div class="ewd-output-header">
+                            <span class="ewd-output-icon">✓</span>
+                            <span class="ewd-output-title" id="ewd-output-title">Launch Plan Generated</span>
+                        </div>
+                        <div class="ewd-output-items" id="ewd-output-items"></div>
+                    </div>
+                    <!-- Progress bar -->
+                    <div class="ewd-progress-wrap">
+                        <div class="ewd-progress-bar" id="ewd-progress-bar"></div>
+                        <span class="ewd-progress-label" id="ewd-progress-label">0%</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="product-detail-section container">
+            <div class="section-heading">
+                <span class="section-tag">CORE FEATURES</span>
+                <h2 class="section-title">A premium operating layer for modern work.</h2>
+            </div>
+            <div class="feature-grid">
+                <article class="feature-card"><h3>Natural Language Control</h3><p>Ask for tasks in plain language and let the OS interpret and act.</p></article>
+                <article class="feature-card"><h3>Workspace Management</h3><p>Organize documents, projects, agents, and workflows in one cohesive environment.</p></article>
+                <article class="feature-card"><h3>File Intelligence</h3><p>Understand content structure, context, and relationships across stored assets.</p></article>
+                <article class="feature-card"><h3>Email Generation</h3><p>Draft high-quality communications for outreach, partnerships, and internal coordination.</p></article>
+                <article class="feature-card"><h3>Project Coordination</h3><p>Keep teams aligned with live tasks, handoffs, and context-rich progress updates.</p></article>
+                <article class="feature-card"><h3>Research Assistance</h3><p>Collect, summarize, and package information into reusable knowledge outputs.</p></article>
+                <article class="feature-card"><h3>Multi-Agent Operations</h3><p>Coordinate specialized agents for research, content, planning, and execution.</p></article>
+                <article class="feature-card"><h3>Privacy First Design</h3><p>Prioritize local processing, user ownership, and transparent permissions.</p></article>
+            </div>
+        </section>
+
+        <section class="product-detail-section container">
+            <div class="section-heading">
+                <span class="section-tag">INTERACTIVE DEMO</span>
+                <h2 class="section-title">Watch EntropyOS turn a request into action.</h2>
+            </div>
+            <div class="product-live-demo reveal reveal-scale">
+                <div class="live-demo-terminal">
+                    <div class="live-demo-topbar">
+                        <span class="live-demo-dot"></span><span class="live-demo-dot"></span><span class="live-demo-dot"></span>
+                    </div>
+                    <div class="live-demo-body" id="entropy-live-demo-page">
+                        <div class="demo-step active">
+                            <div class="demo-step-title">User</div>
+                            <div class="demo-step-content" id="entropy-user-text"></div>
+                        </div>
+                        <div class="demo-step">
+                            <div class="demo-step-title">EntropyOS</div>
+                            <div class="demo-step-content" id="entropy-status-text"></div>
+                            <div class="demo-loader" id="entropy-loader"></div>
+                            <div class="demo-progress"><span id="entropy-progress-fill"></span></div>
+                            <div class="demo-log" id="entropy-log"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="product-detail-section container">
+            <div class="section-heading">
+                <span class="section-tag">ARCHITECTURE</span>
+                <h2 class="section-title">A layered system built for reliable autonomy.</h2>
+            </div>
+            <div class="detail-grid">
+                <article class="detail-card"><h3>AI Engine</h3><p>Reasoning, planning, language understanding, and task decomposition.</p></article>
+                <article class="detail-card"><h3>Agent Layer</h3><p>Specialized agents for file action, research, communication, and workflow automation.</p></article>
+                <article class="detail-card"><h3>Workspace Layer</h3><p>Unified context for files, projects, actions, and user history.</p></article>
+                <article class="detail-card"><h3>Security Layer</h3><p>Permissions, storage controls, auditability, and local-first data handling.</p></article>
+            </div>
+        </section>
+
+        <section class="product-detail-section container">
+            <div class="section-heading">
+                <span class="section-tag">AI AGENTS</span>
+                <h2 class="section-title">Specialized agents for every part of the workflow.</h2>
+            </div>
+            <div class="agent-grid">
+                <article class="agent-card reveal reveal-up"><div class="agent-icon">↗</div><h3>Research Agent</h3><p>Collects information, compares sources, and builds structured summaries.</p></article>
+                <article class="agent-card reveal reveal-up"><div class="agent-icon">⌘</div><h3>Code Agent</h3><p>Handles implementation tasks, debugging, and code generation with context.</p></article>
+                <article class="agent-card reveal reveal-up"><div class="agent-icon">⚙</div><h3>Automation Agent</h3><p>Creates rules, launches actions, and manages background execution.</p></article>
+                <article class="agent-card reveal reveal-up"><div class="agent-icon">✉</div><h3>Email Agent</h3><p>Drafts polished follow-ups, proposals, and customer communications.</p></article>
+                <article class="agent-card reveal reveal-up"><div class="agent-icon">▣</div><h3>Project Agent</h3><p>Coordinates tasks, blockers, and team progress across the workspace.</p></article>
+            </div>
+        </section>
+
+        <section class="product-detail-section container">
+            <div class="section-heading">
+                <span class="section-tag">PRODUCT WALKTHROUGH</span>
+                <h2 class="section-title">Five steps from intent to outcome.</h2>
+            </div>
+            <div class="workflow-flow reveal reveal-scale">
+                <div class="workflow-step"><span>1. User enters request</span></div>
+                <div class="workflow-arrow">→</div>
+                <div class="workflow-step"><span>2. EntropyOS understands intent</span></div>
+                <div class="workflow-arrow">→</div>
+                <div class="workflow-step"><span>3. Agents collaborate</span></div>
+                <div class="workflow-arrow">→</div>
+                <div class="workflow-step"><span>4. Tasks execute</span></div>
+                <div class="workflow-arrow">→</div>
+                <div class="workflow-step"><span>5. Results generated</span></div>
+            </div>
+        </section>
+
+        <section class="product-detail-section container">
+            <div class="section-heading">
+                <span class="section-tag">ANIMATED STATISTICS</span>
+                <h2 class="section-title">Performance that feels immediate and measurable.</h2>
+            </div>
+            <div class="stats-grid">
+                <article class="stat-card reveal reveal-up"><div class="stat-value" data-count="10">0</div><h3>10x Faster Task Execution</h3><p>Complex work is compressed into a fluid, guided workflow.</p></article>
+                <article class="stat-card reveal reveal-up"><div class="stat-value" data-count="95">0</div><h3>95% Workflow Automation</h3><p>Routine actions and repetitive tasks are handled with minimal friction.</p></article>
+                <article class="stat-card reveal reveal-up"><div class="stat-value" data-count="100">0</div><h3>100% Natural Language Driven</h3><p>Users describe outcomes and the operating layer translates them into action.</p></article>
+                <article class="stat-card reveal reveal-up"><div class="stat-value" data-count="24">0</div><h3>24/7 Agent Operations</h3><p>Background work continues while the user stays focused on decisions.</p></article>
+            </div>
+        </section>
+
+        <section class="product-detail-section container">
+            <div class="section-heading">
+                <span class="section-tag">USE CASES</span>
+                <h2 class="section-title">Built for teams that move fast.</h2>
+            </div>
+            <div class="use-case-grid">
+                <div class="use-case-card">Developers</div>
+                <div class="use-case-card">Startups</div>
+                <div class="use-case-card">Research Teams</div>
+                <div class="use-case-card">Students</div>
+                <div class="use-case-card">Enterprises</div>
+                <div class="use-case-card">Operations Teams</div>
+            </div>
+        </section>
+
+        <section class="product-detail-section container">
+            <div class="section-heading">
+                <span class="section-tag">SCREENSHOTS</span>
+                <h2 class="section-title">Visual evidence of the workspace experience.</h2>
+            </div>
+            <div class="gallery-carousel">
+                <div class="gallery-card reveal reveal-up" data-title="Workspace" data-description="A collaborative command center for multi-step work."><h3>Workspace</h3><p>A collaborative command center for multi-step work.</p><span class="gallery-pill">Interactive</span></div>
+                <div class="gallery-card reveal reveal-up" data-title="File Manager" data-description="Context-aware file operations and intelligent retrieval."><h3>File Manager</h3><p>Context-aware file operations and intelligent retrieval.</p><span class="gallery-pill">Files</span></div>
+                <div class="gallery-card reveal reveal-up" data-title="Research Mode" data-description="Structured synthesis for analysis and insight generation."><h3>Research Mode</h3><p>Structured synthesis for analysis and insight generation.</p><span class="gallery-pill">Research</span></div>
+                <div class="gallery-card reveal reveal-up" data-title="Automation System" data-description="Live visibility into automations, triggers, and outcomes."><h3>Automation System</h3><p>Live visibility into automations, triggers, and outcomes.</p><span class="gallery-pill">Automation</span></div>
+                <div class="gallery-card reveal reveal-up" data-title="Agent Panel" data-description="Coordinate specialized agents with clear permissions and views."><h3>Agent Panel</h3><p>Coordinate specialized agents with clear permissions and views.</p><span class="gallery-pill">Agents</span></div>
+            </div>
+        </section>
+
+        <section class="product-detail-section container">
+            <div class="section-heading">
+                <span class="section-tag">SECURITY</span>
+                <h2 class="section-title">Built for ownership, control, and trust.</h2>
+            </div>
+            <div class="detail-grid">
+                <article class="detail-card"><h3>Local-first philosophy</h3><p>User data stays under their control whenever possible and is never treated as a passive by-product.</p></article>
+                <article class="detail-card"><h3>Encrypted storage</h3><p>Secure handling of workspace artifacts, configurations, and sensitive outputs.</p></article>
+                <article class="detail-card"><h3>Permission system</h3><p>Granular access controls keep actions visible and governed.</p></article>
+                <article class="detail-card"><h3>Data ownership</h3><p>Users retain the right to inspect, move, export, and govern their information.</p></article>
+            </div>
+        </section>
+
+        <section class="product-detail-section container">
+            <div class="section-heading">
+                <span class="section-tag">ROADMAP</span>
+                <h2 class="section-title">A steady path from intelligent workspace to full platform.</h2>
+            </div>
+            <div class="roadmap-grid">
+                <div class="roadmap-card"><h3>Phase 1</h3><p>Core Workspace</p></div>
+                <div class="roadmap-card"><h3>Phase 2</h3><p>Advanced Agents</p></div>
+                <div class="roadmap-card"><h3>Phase 3</h3><p>Enterprise Features</p></div>
+                <div class="roadmap-card"><h3>Phase 4</h3><p>Cross Platform Expansion</p></div>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="cta-band">
+                <h2>Ready to see EntropyOS in action?</h2>
+                <div class="product-detail-actions">
+                    <a href="contact.html?subject=EntropyOS%20Access%20Request" class="btn btn-primary btn-green">Request Early Access</a>
+                    <a href="contact.html" class="btn btn-outline">Contact Infiposts</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid-layout">
+            <div class="footer-col-brand">
+                <div class="footer-powered-row">
+                    <img src="assets/logo.png" alt="Infiposts Logo" class="footer-mini-logo">
+                    <span class="footer-powered-text">Powered by Infiposts</span>
+                </div>
+                <p class="footer-tagline">Building the future of human-computer interaction.</p>
+                <div class="footer-socials">
+                    <a href="contact.html" class="social-icon">Contact</a>
+                    <a href="index.html" class="social-icon">Home</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <span class="footer-col-title">Products</span>
+                <a href="index.html#entropyos" class="footer-link">EntropyOS</a>
+                <a href="index.html#binary" class="footer-link">Binary</a>
+
+            </div>
+            <div class="footer-col">
+                <span class="footer-col-title">Resources</span>
+                <a href="contact.html" class="footer-link">Documentation</a>
+                <a href="contact.html" class="footer-link">API Reference</a>
+                <a href="contact.html" class="footer-link">System Status</a>
+            </div>
+            <div class="footer-col">
+                <span class="footer-col-title">Company</span>
+                <a href="index.html#about" class="footer-link">About Us</a>
+                <a href="index.html#updates" class="footer-link">Product Updates</a>
+                <a href="contact.html" class="footer-link">Contact</a>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p class="footer-copyright">&copy; 2026 Infiposts Private Limited - Bangalore</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const revealItems = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) entry.target.classList.add('is-visible');
+                });
+            }, { threshold: 0.15 });
+            revealItems.forEach((item) => observer.observe(item));
+
+            const statCards = document.querySelectorAll('.stat-value');
+            statCards.forEach((card) => {
+                const target = Number(card.dataset.count || 0);
+                let current = 0;
+                const step = Math.max(1, Math.round(target / 24));
+                const timer = setInterval(() => {
+                    current += step;
+                    if (current >= target) {
+                        card.textContent = target + (target === 24 ? '/7' : target === 100 ? '%' : (target === 95 ? '%' : 'x'));
+                        clearInterval(timer);
+                    } else {
+                        card.textContent = current + (target === 24 ? '/7' : target === 100 ? '%' : (target === 95 ? '%' : 'x'));
+                    }
+                }, 45);
+            });
+        });
+    </script>
+</body>
+</html>

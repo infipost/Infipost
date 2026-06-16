@@ -1,147 +1,642 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Infipost Combined</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infiposts | The AI Operating System Built for Natural Language</title>
+    <meta name="description" content="Manage files, coordinate projects, and automate complex workflows simply by describing what you need. Entropy OS translates natural language into immediate action.">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Main Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.classList.add(savedTheme + '-theme');
+        })();
+    </script>
 </head>
 <body>
+    <!-- Radial Background Grid Overlay -->
+    <div class="grid-overlay"></div>
+    <div class="glow-container">
+        <div class="glow-spot glow-green" id="glow-hero"></div>
+        <div class="glow-spot glow-blue" id="glow-binary-section"></div>
 
-  <!-- Index Section -->
-  <header>
-    <div class="logo">
-      <div class="square"></div>
-      <div class="circle"></div>
-      <div class="triangle"></div>
     </div>
-    <div class="buttons">
-      <button class="join">Join Infipost</button>
-      <button class="dark-mode">Light/Dark Mode</button>
-    </div>
-  </header>
 
-  <section class="hero">
-    <h1>AI-powered Social Utility Platform</h1>
-    <p>Solve problems. Share ideas. Grow together.</p>
-    <div class="hero-buttons">
-      <button class="explore">Explore AI Tools</button>
-      <button class="join-hero">Join Infipost</button>
-    </div>
-  </section>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="nav-bar">
+        <div class="nav-container">
+            <a href="#" class="nav-brand" id="brand-logo">
+                <img src="assets/logo.png" alt="Infiposts Logo" class="brand-logo-img">
+            </a>
+            <div class="nav-links" id="navbar-links">
+                <a href="#" class="nav-link-item">HOME</a>
+                <a href="#entropyos" class="nav-link-item">ENTROPYOS</a>
+                <a href="#binary" class="nav-link-item">BINARY</a>
+            </div>
+            <div class="nav-right-container">
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle-btn" class="theme-toggle-premium" aria-label="Toggle theme" title="Switch theme" type="button">
+                    <!-- Moon icon (dark mode) -->
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/>
+                    </svg>
+                    <!-- Sun icon (light mode) -->
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                </button>
+                <!-- Hamburger Menu Toggle (mobile) -->
+                <button class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
 
-  <section class="trusted">
-    <div>■ TechCrunch</div>
-    <div>● Product Hunt</div>
-    <div>▲ Forbes</div>
-    <div>■ WIRED</div>
-  </section>
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="hero-container">
+            <div class="hero-tag-pill">
+                <span class="tag-dot"></span>
+                <span class="tag-text">INFIPOSTS PRIVATE LIMITED &middot; BANGALORE</span>
+            </div>
+            <h1 class="hero-title">
+                THE AI OPERATING SYSTEM <br><span class="gradient-text">THAT UNDERSTANDS YOU</span>
+            </h1>
+            <p class="hero-subtitle">
+                Manage files, coordinate projects, and automate workflows simply by describing what you need. Entropy translates your natural language into action instantly.
+            </p>
+            <div class="hero-ctas">
+                <a href="#entropyos" class="btn btn-primary" id="cta-try-entropy">Try Entropy OS</a>
+                <a href="#features" class="btn btn-outline" id="cta-explore">Explore Features</a>
+                <a href="#docs" class="btn btn-outline" id="cta-docs">View Documentation</a>
+            </div>
 
-  <section class="about">
-    <b>Infipost combines AI tools with<br>genuine human collaboration—<br>solving real-world challenges together.</b>
-    <p>Modern utility, community power,<br>with signature orange border.</p>
-  </section>
+            <!-- Hero Visual: Large AI assistant interface with typing conversation flow -->
+            <div class="hero-visual-container">
+                <div class="device-frame">
+                    <div class="device-header">
+                        <div class="window-controls">
+                            <span class="control-dot close"></span>
+                            <span class="control-dot minimize"></span>
+                            <span class="control-dot expand"></span>
+                        </div>
+                        <div class="window-title">Entropy OS Workspace</div>
+                        <div class="window-status"><span class="status-indicator-green"></span>Active</div>
+                    </div>
+                    <div class="device-content">
+                        <!-- Left pane: Sidebar -->
+                        <div class="device-sidebar">
+                            <div class="sidebar-logo-sec">
+                                <img src="assets/logo.png" alt="Infiposts Logo" class="sidebar-logo">
+                                <span class="sidebar-logo-text">Entropy OS</span>
+                            </div>
+                            <div class="sidebar-menu">
+                                <div class="sidebar-menu-title">Navigation</div>
+                                <a href="#" class="sidebar-link active"><span class="icon">&bull;</span>Workspace</a>
+                                <a href="#" class="sidebar-link"><span class="icon">&bull;</span>Files & Assets</a>
+                                <a href="#" class="sidebar-link"><span class="icon">&bull;</span>Automations</a>
+                                <a href="#" class="sidebar-link"><span class="icon">&bull;</span>Team Agents</a>
+                            </div>
+                            <div class="sidebar-footer">
+                                <div class="user-profile">
+                                    <div class="avatar">U</div>
+                                    <div class="user-info">
+                                        <div class="username">Demo User</div>
+                                        <div class="user-role">Developer</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-  <footer>
-    <div><i class="fas fa-robot"></i></div>
-    <div><i class="fas fa-map-marker-alt"></i></div>
-    <div><i class="fas fa-coins"></i></div>
-    <div><i class="fas fa-user"></i></div>
-  </footer>
+                        <!-- Right pane: Main Chat Workspace -->
+                        <div class="chat-workspace">
+                            <div class="chat-history" id="hero-chat-history">
+                                <!-- Dynamic Chat Flows loaded via JavaScript -->
+                                <div class="chat-welcome">
+                                    <div class="welcome-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.7 5.3L19 10l-5.3 1.7L12 17l-1.7-5.3L5 10l5.3-1.7L12 3z"/></svg>
+                                    </div>
+                                    <h3>Welcome to Entropy OS</h3>
+                                    <p>Your computer should understand you. Describe what you need, and watch Entropy execute tasks autonomously.</p>
+                                </div>
+                            </div>
+                            <div class="chat-input-area">
+                                <div class="chat-input-container">
+                                    <div class="input-prefix">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.7 5.3L19 10l-5.3 1.7L12 17l-1.7-5.3L5 10l5.3-1.7L12 3z"/></svg>
+                                    </div>
+                                    <input type="text" class="chat-input-field" id="hero-chat-input" readonly placeholder="Type your request to Entropy...">
+                                    <button class="chat-send-btn" id="hero-chat-send" aria-label="Send Message">
+                                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                                    </button>
+                                </div>
+                                <div class="chat-input-tips">Press Enter to send. Try: "Create a workspace" or "Write an email draft".</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-  <!-- About Section -->
-  <section class="intro">
-    <h3>with signature orange border</h3>
-  </section>
-  <div class="features-grid">
-    <div class="feature"><i class="fas fa-robot"></i><br>Auto Complaint Gen</div>
-    <div class="feature"><i class="fas fa-map-marker-alt"></i><br>Scheme Navigator</div>
-    <div class="feature"><i class="fas fa-coins"></i><br>Income Idea Gen</div>
-    <div class="feature"><i class="fas fa-user"></i><br>Relationship Coach</div>
-    <div class="feature"><i class="fas fa-globe"></i><br>Travel Assistant</div>
-    <div class="feature"><i class="fas fa-microphone"></i><br>Voice-to-Text Writer</div>
-    <div class="feature"><i class="fas fa-bolt"></i><br>Try Now</div>
-    <div class="feature"><i class="fas fa-bolt"></i><br>Try Now</div>
-    <div class="feature"><i class="fas fa-comments"></i><br>Real-time chat</div>
-    <div class="feature"><i class="fas fa-file-lines"></i><br>Post&share</div>
-    <div class="feature"><i class="fas fa-users"></i><br>Clubs</div>
-    <div class="feature"><i class="fas fa-shopping-cart"></i><br>Marketplace</div>
-    <div class="feature"><i class="fas fa-lock"></i><br>Privacy settings</div>
-    <div class="feature"><i class="fas fa-bolt"></i><br>---</div>
-    <div class="feature"><i class="fas fa-bolt"></i><br>---</div>
-    <div class="feature"><i class="fas fa-bolt"></i><br>---</div>
-  </div>
+            <!-- Stats below Hero -->
+            <div class="hero-stats-row">
+                <div class="hero-stat-item">
+                    <span class="hero-stat-label">FOUNDED</span>
+                    <span class="hero-stat-val">2021</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat-item">
+                    <span class="hero-stat-label">INCUBATED AT</span>
+                    <span class="hero-stat-val">REVA NEST</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat-item">
+                    <span class="hero-stat-label">LOCATION</span>
+                    <span class="hero-stat-val">BANGALORE, INDIA</span>
+                </div>
+            </div>
+        </div>
+    </header>
 
- 
-  <!-- Services Section -->
-  <section class="service">
-    <h3>Introducing Podcasts</h3>
-    <p>
-      Listen, create, or share on Infipost’s <br>new podcast platform.
-      Modern player,<br> easy discovery, bright orange highlights.
-    </p>
-  </section>
-  <div class="icon-grid">
-    <div class="icon-item"><div><i class="fas fa-pen"></i></div><p>Write Articles</p></div>
-    <div class="icon-item"><div><i class="fas fa-comment-dots"></i></div><p>Share Opinions</p></div>
-    <div class="icon-item"><div><i class="fas fa-lightbulb"></i></div><p>Explore Ideas</p></div>
-    <div class="icon-item"><div><i class="fas fa-bolt"></i></div><p>---</p></div>
-    <div class="icon-item"><div><i class="fas fa-shield-alt"></i></div><p>Block</p></div>
-    <div class="icon-item"><div><i class="fas fa-exclamation-triangle"></i></div><p>Report</p></div>
-    <div class="icon-item"><div><i class="fas fa-trash"></i></div><p>Delete</p></div>
-    <div class="icon-item"><div><i class="fas fa-lock"></i></div><p>Privacy</p></div>
-  </div>
+    <!-- Main Products Section -->
+    <main class="products-section" id="products">
+        <div class="container">
+            <span class="section-tag">OUR PRODUCTS</span>
+            <h2 class="section-title">Technology that works for you</h2>
 
-  <!-- Contact/FAQ Section -->
+            <!-- ENTROPY OS CARD -->
+            <section class="product-card card-entropy" id="entropyos">
+                <div class="product-info-column">
+                    <div class="product-badge badge-green">
+                        <span class="badge-dot"></span>
+                        <span class="badge-txt">OS PLATFORM</span>
+                    </div>
+                    <h3 class="product-card-title">EntropyOS</h3>
+                    <h4 class="product-card-subtitle">AI-NATIVE OPERATING SYSTEM</h4>
+                    
+                    <p class="product-description">
+                        Designed around natural language rather than rigid commands, Entropy OS lets you manage files, automate workflows, and coordinate projects using plain text. By shifting the execution from user to system, it removes the need for terminals or scripting, making computing intuitive for everyone.
+                    </p>
 
-  <div class="faq">
-    <div class="faq-container">
-      <div class="faq-item">
-        <div class="faq-question"><span>+ What is Infipost?</span></div>
-        <div class="faq-answer">Infipost is a platform that combines AI tools with community collaboration.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question"><span>+ How do I access AI tools?</span></div>
-        <div class="faq-answer">You can explore AI tools by clicking the “Explore AI Tools” button on the homepage.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question"><span>+ Is my data private?</span></div>
-        <div class="faq-answer">Yes, your data is protected and handled with strict privacy measures.</div>
-      </div>
-    </div>
-  </div>
+                    <ul class="product-feature-list">
+                        <li>
+                            <span class="list-bullet bullet-green">&bull;</span>
+                            <span class="list-text">Interact with your computer using natural language.</span>
+                        </li>
+                        <li>
+                            <span class="list-bullet bullet-green">&bull;</span>
+                            <span class="list-text">Describe a task and Entropy handles the execution.</span>
+                        </li>
+                        <li>
+                            <span class="list-bullet bullet-green">&bull;</span>
+                            <span class="list-text">Keep your data secure with our fully local, on-device architecture.</span>
+                        </li>
+                        <li>
+                            <span class="list-bullet bullet-green">&bull;</span>
+                            <span class="list-text">Organize files, tasks, and projects in a single, fluid workspace.</span>
+                        </li>
+                    </ul>
 
-  <footer>
-    <div class="logo">
-      <div class="square"></div>
-      <div class="circle"></div>
-      <div class="triangle"></div>
-    </div>
-    <div class="footer-right">
-      <div class="footer-column">
-        <p>Links</p>
-        <p>Terms of Service</p>
-        <p>Privacy Policy</p>
-        <p>Contact</p>
-      </div>
-      <div class="footer-column">
-        <p>Company</p>
-        <p>About</p>
-        <p>Press</p>
-        <p>Careers</p>
-      </div>
-    </div>
-  </footer>
+                    <div class="product-card-ctas">
+                        <a href="entropyos.html" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-green">Learn More &rarr;</a>
+                        <a href="contact.html?subject=EntropyOS%20Access%20Request" class="btn btn-outline">Request Access</a>
+                    </div>
+                </div>
 
-  <script>
-    const faqItems = document.querySelectorAll('.faq-item');
-    faqItems.forEach(item => {
-      item.querySelector('.faq-question').addEventListener('click', () => {
-        item.classList.toggle('active');
-      });
-    });
-  </script>
+                <!-- Right Side: AI Conversation Workspace with Interactive Capability Switcher -->
+                <div class="product-visual-column">
+                    <div class="interactive-showcase-container">
+                        <!-- Navigation tabs for the 8 requested mockups -->
+                        <div class="showcase-tabs" id="showcase-tabs-list">
+                            <button class="showcase-tab active" data-tab="workspace">Workspace</button>
+                            <button class="showcase-tab" data-tab="files">File Manager</button>
+                            <button class="showcase-tab" data-tab="email">Email Gen</button>
+                            <button class="showcase-tab" data-tab="project">Dashboard</button>
+                            <button class="showcase-tab" data-tab="automation">Automation</button>
+                            <button class="showcase-tab" data-tab="multiagent">Multi-Agent</button>
+                            <button class="showcase-tab" data-tab="research">Research</button>
+                            <button class="showcase-tab" data-tab="team">Productivity</button>
+                        </div>
 
+                        <!-- Showcase Display Window -->
+                        <div class="showcase-window">
+                            <div class="showcase-window-header">
+                                <span class="window-dot-red"></span>
+                                <span class="window-dot-yellow"></span>
+                                <span class="window-dot-green"></span>
+                                <span class="showcase-window-title" id="showcase-active-title">AI Conversation Workspace</span>
+                            </div>
+                            <div class="showcase-content" id="showcase-display-content">
+                                <!-- Dynamic Mockup UI will load here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BINARY CARD -->
+            <section class="product-card card-binary" id="binary">
+                <!-- Left Side: Mobile screen streaming / Remote Access Mockup -->
+                <div class="product-visual-column visual-left">
+                    <div class="mobile-device-wrapper">
+                        <div class="mobile-frame">
+                            <div class="mobile-screen">
+                                <div class="mobile-header">
+                                    <div class="mobile-camera"></div>
+                                    <div class="mobile-status-row">
+                                        <span class="mobile-time" id="bin-clock">14:20</span>
+                                        <span class="mobile-battery">66%</span>
+                                    </div>
+                                </div>
+                                <div class="mobile-app-content">
+                                    <!-- Header: Live badge + connection status -->
+                                    <div class="stream-header">
+                                        <span class="stream-live-indicator" id="bin-live-badge">LIVE STREAM</span>
+                                        <div class="stream-title" id="bin-stream-title">Binary Remote Desktop</div>
+                                    </div>
+
+                                    <!-- Connection status bar -->
+                                    <div class="bin-conn-bar" id="bin-conn-bar">
+                                        <span class="bin-conn-dot" id="bin-conn-dot"></span>
+                                        <span class="bin-conn-label" id="bin-conn-label">Offline</span>
+                                    </div>
+
+                                    <!-- Remote desktop viewport -->
+                                    <div class="stream-viewport">
+                                        <div class="mock-desktop-stream" id="bin-desktop">
+                                            <div class="desktop-menu-bar">
+                                                <span class="desktop-brand" id="bin-app-label">Entropy OS</span>
+                                                <span class="desktop-time">14:20 PM</span>
+                                            </div>
+                                            <div class="desktop-grid-apps">
+                                                <div class="app-icon-mock" id="bin-icon-1"></div>
+                                                <div class="app-icon-mock" id="bin-icon-2"></div>
+                                                <div class="app-icon-mock" id="bin-icon-3"></div>
+                                            </div>
+                                            <div class="desktop-open-app" id="bin-open-app">
+                                                <div class="app-header-mock" id="bin-app-header">Figma - Homepage</div>
+                                                <div class="app-body-mock">
+                                                    <div class="canvas-art">
+                                                        <div class="canvas-hero-box" id="bin-canvas-hero"></div>
+                                                        <div class="canvas-grid-box"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Animated remote cursor -->
+                                            <div class="remote-cursor" id="bin-remote-cursor"></div>
+                                            <!-- Cursor click pulse -->
+                                            <div class="bin-cursor-pulse" id="bin-cursor-pulse"></div>
+                                        </div>
+
+                                        <!-- Progress bar overlay at bottom of viewport -->
+                                        <div class="bin-progress-wrap" id="bin-progress-wrap">
+                                            <div class="bin-progress-bar" id="bin-progress-bar"></div>
+                                            <span class="bin-progress-label" id="bin-progress-label">0%</span>
+                                        </div>
+
+                                        <!-- Success overlay -->
+                                        <div class="bin-success-overlay" id="bin-success-overlay">
+                                            <div class="bin-success-icon">✓</div>
+                                            <div class="bin-success-text" id="bin-success-text">Task Completed</div>
+                                            <div class="bin-success-sub" id="bin-success-sub">Saved to Downloads</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Command input area -->
+                                    <div class="stream-controls">
+                                        <div class="stream-input-label">AI COMMAND</div>
+                                        <div class="stream-input-box" id="bin-input-box">
+                                            <span class="input-cursor-active"></span>
+                                            <span id="bin-typed-text"></span>
+                                        </div>
+
+                                        <!-- Activity log -->
+                                        <div class="bin-activity-log" id="bin-activity-log"></div>
+
+                                        <!-- Action buttons -->
+                                        <div class="action-buttons-row">
+                                            <button class="mobile-action-btn">PAUSE</button>
+                                            <button class="mobile-action-btn">KEYS</button>
+                                        </div>
+                                        <button class="mobile-execute-btn" id="bin-execute-btn">+ AI EXECUTE</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mobile-backdrop-glow"></div>
+                    </div>
+                </div>
+
+                <!-- Right Side: Product Description -->
+                <div class="product-info-column">
+                    <div class="product-badge badge-blue">
+                        <span class="badge-dot"></span>
+                        <span class="badge-txt">REMOTE INTELLIGENCE</span>
+                    </div>
+                    <h3 class="product-card-title">Binary</h3>
+                    <h4 class="product-card-subtitle">AI-POWERED REMOTE ACCESS & CONTROL</h4>
+                    
+                    <p class="product-description">
+                        Binary connects you to your devices from anywhere. Access any remote PC or laptop to manage screens, control peripherals, or delegate tasks to an on-device agent that responds directly to voice and text.
+                    </p>
+
+                    <div class="platform-badges-container">
+                        <span class="platform-badge">WINDOWS</span>
+                        <span class="platform-badge">LINUX</span>
+                        <span class="platform-badge">ENTROPYOS</span>
+                        <span class="platform-badge">IOS</span>
+                        <span class="platform-badge">ANDROID</span>
+                    </div>
+
+                    <ul class="product-feature-list">
+                        <li>
+                            <span class="list-bullet bullet-blue">&bull;</span>
+                            <span class="list-text">Stream your desktop to your mobile device in real time.</span>
+                        </li>
+                        <li>
+                            <span class="list-bullet bullet-blue">&bull;</span>
+                            <span class="list-text">Control your mouse, keyboard, and clipboard directly from your phone.</span>
+                        </li>
+                        <li>
+                            <span class="list-bullet bullet-blue">&bull;</span>
+                            <span class="list-text">Describe a task and Binary handles the execution.</span>
+                        </li>
+                        <li>
+                            <span class="list-bullet bullet-blue">&bull;</span>
+                            <span class="list-text">Built to work seamlessly across Windows, Linux, and EntropyOS.</span>
+                        </li>
+                    </ul>
+
+                    <div class="product-card-ctas">
+                        <a href="binary.html" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-blue">Learn More &rarr;</a>
+                        <a href="contact.html?subject=Binary%20Access%20Request" class="btn btn-outline">Request Access</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- FEATURES LIST SECTION (REBRANDED FOR ENTROPY OS) -->
+    <section class="features-grid-section" id="features">
+        <div class="container">
+            <span class="section-tag text-center">CORE CAPABILITIES</span>
+            <h2 class="section-title text-center">An OS engineered for conversation</h2>
+            <div class="features-grid">
+                <!-- 1. Natural Language Control -->
+                <div class="feature-grid-card">
+                    <div class="feature-grid-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/><path d="M8 10h8"/><path d="M8 14h5"/></svg>
+                    </div>
+                    <h3 class="feature-grid-title">Natural Language Control</h3>
+                    <p class="feature-grid-text">Interact with your computer using everyday language. No commands, syntax, or terminals needed.</p>
+                </div>
+                <!-- 2. Intelligent Task Automation -->
+                <div class="feature-grid-card">
+                    <div class="feature-grid-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 1 3 3v1h2a2 2 0 0 1 2 2v2a5 5 0 0 1-5 5h-2a5 5 0 0 1-5-5V8a2 2 0 0 1 2-2h2V5a3 3 0 0 1 3-3z"/><path d="M9.5 15.5 7 18"/><path d="M14.5 15.5 17 18"/></svg>
+                    </div>
+                    <h3 class="feature-grid-title">Intelligent Task Automation</h3>
+                    <p class="feature-grid-text">Describe long-running complex tasks and let Entropy complete them automatically in the background.</p>
+                </div>
+                <!-- 3. AI Workspace Management -->
+                <div class="feature-grid-card">
+                    <div class="feature-grid-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M7 13h10"/><path d="M7 9h6"/></svg>
+                    </div>
+                    <h3 class="feature-grid-title">AI Workspace Management</h3>
+                    <p class="feature-grid-text">Create, organize, and manage folders, files, and project assets effortlessly via conversation.</p>
+                </div>
+                <!-- 4. Smart File Organization -->
+                <div class="feature-grid-card">
+                    <div class="feature-grid-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-4-4H6a2 2 0 0 0-2 2z"/><path d="M14 5v4h4"/><path d="M8 13h8"/><path d="M8 17h5"/></svg>
+                    </div>
+                    <h3 class="feature-grid-title">Smart File Organization</h3>
+                    <p class="feature-grid-text">Automatically sort, categorize, tag, and organize files based on their content, metadata, and context.</p>
+                </div>
+                <!-- 5. Email & Document Generation -->
+                <div class="feature-grid-card">
+                    <div class="feature-grid-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="m4 8 8 5 8-5"/><path d="M8 12h4"/></svg>
+                    </div>
+                    <h3 class="feature-grid-title">Email &amp; Document Generation</h3>
+                    <p class="feature-grid-text">Create professional drafts, meeting summaries, status reports, and structured documents instantly.</p>
+                </div>
+                <!-- 6. Project Management Assistant -->
+                <div class="feature-grid-card">
+                    <div class="feature-grid-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h8"/></svg>
+                    </div>
+                    <h3 class="feature-grid-title">Project Management Assistant</h3>
+                    <p class="feature-grid-text">Manage complex project deadlines, assign automated sub-tasks, and coordinate team workflows easily.</p>
+                </div>
+                <!-- 7. Developer Friendly -->
+                <div class="feature-grid-card">
+                    <div class="feature-grid-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m7 8-4 4 4 4"/><path d="m17 8 4 4-4 4"/><path d="M14 4 10 20"/></svg>
+                    </div>
+                    <h3 class="feature-grid-title">Developer Friendly</h3>
+                    <p class="feature-grid-text">Leverage coding assistance, interactive debugging, code automation, research, and documentation generation.</p>
+                </div>
+                <!-- 8. Non-Technical User Friendly -->
+                <div class="feature-grid-card">
+                    <div class="feature-grid-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a3 3 0 0 0-2-2.9"/><path d="M16 3.2a4 4 0 0 1 0 7.6"/></svg>
+                    </div>
+                    <h3 class="feature-grid-title">Non-Technical User Friendly</h3>
+                    <p class="feature-grid-text">Anyone can utilize full power of the operating system without learning terminals, scripting, or commands.</p>
+                </div>
+                <!-- 9. Multi-Agent Collaboration -->
+                <div class="feature-grid-card">
+                    <div class="feature-grid-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8 7.5 10.5 11"/><path d="M16 7.5 13.5 11"/><path d="M8.5 18 10.8 14.5"/><path d="M15.5 18 13.2 14.5"/></svg>
+                    </div>
+                    <h3 class="feature-grid-title">Multi-Agent Collaboration</h3>
+                    <p class="feature-grid-text">Specialized AI agents work in sync, splitting up sub-tasks to achieve complex operations autonomously.</p>
+                </div>
+                <!-- 10. Privacy First Architecture -->
+                <div class="feature-grid-card">
+                    <div class="feature-grid-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v5c0 5 3.5 8.5 7 10 3.5-1.5 7-5 7-10V6z"/><path d="M9.5 12.5 11 14l3-3"/></svg>
+                    </div>
+                    <h3 class="feature-grid-title">Privacy First Architecture</h3>
+                    <p class="feature-grid-text">Built entirely on-device, your data remains fully encrypted and under your direct local control.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TARGET AUDIENCE SECTION -->
+    <section class="target-audience-section" id="audience">
+        <div class="container">
+            <span class="section-tag text-center">DESIGNED FOR EVERYONE</span>
+            <h2 class="section-title text-center">Built for Everyone</h2>
+            
+            <div class="audience-grid">
+                <!-- Left Side: Developers -->
+                <div class="audience-card audience-developers">
+                    <div class="audience-card-header">
+                        <div class="audience-icon">&lt;/&gt;</div>
+                        <h3 class="audience-heading">Developers</h3>
+                    </div>
+                    <div class="audience-features-grid">
+                        <div class="audience-feat-item">
+                            <span class="feat-bullet">&bull;</span>
+                            <span class="feat-txt">Write, refactor, and generate clean code templates using natural language.</span>
+                        </div>
+                        <div class="audience-feat-item">
+                            <span class="feat-bullet">&bull;</span>
+                            <span class="feat-txt">Query API specifications, scan logs, and search technical documentation instantly.</span>
+                        </div>
+                        <div class="audience-feat-item">
+                            <span class="feat-bullet">&bull;</span>
+                            <span class="feat-txt">Identify debugging options and apply fixes by sharing stack traces directly.</span>
+                        </div>
+                        <div class="audience-feat-item">
+                            <span class="feat-bullet">&bull;</span>
+                            <span class="feat-txt">Generate utility scripts, configure build pipelines, and manage containers.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side: Professionals & Everyday Users -->
+                <div class="audience-card audience-professionals">
+                    <div class="audience-card-header">
+                        <div class="audience-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V6a3 3 0 0 1 6 0v1"/><path d="M3 12h18"/></svg>
+                        </div>
+                        <h3 class="audience-heading">Professionals &amp; Everyday Users</h3>
+                    </div>
+                    <div class="audience-features-grid">
+                        <div class="audience-feat-item">
+                            <span class="feat-bullet">&bull;</span>
+                            <span class="feat-txt">Draft replies, compose out-of-office notifications, and write newsletters.</span>
+                        </div>
+                        <div class="audience-feat-item">
+                            <span class="feat-bullet">&bull;</span>
+                            <span class="feat-txt">Keep files organized by letting Entropy categorize your downloads folder.</span>
+                        </div>
+                        <div class="audience-feat-item">
+                            <span class="feat-bullet">&bull;</span>
+                            <span class="feat-txt">Check calendar availability, schedule events, and send invitations.</span>
+                        </div>
+                        <div class="audience-feat-item">
+                            <span class="feat-bullet">&bull;</span>
+                            <span class="feat-txt">Compile activity summaries and files into clean, structured PDF reports.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="audience-tagline-container">
+                <p class="audience-tagline">If you can describe it, <span class="highlight-green">Entropy can do it.</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- KEY STATS SECTION -->
+    <section class="stats-counter-section">
+        <div class="container">
+            <div class="stats-counter-grid">
+                <!-- Stat 1 -->
+                <div class="stat-counter-card">
+                    <span class="stat-num text-green">3</span>
+                    <p class="stat-desc">Core products under active development</p>
+                </div>
+                <!-- Stat 2 -->
+                <div class="stat-counter-card">
+                    <span class="stat-num text-blue">100%</span>
+                    <p class="stat-desc">On-device architecture with zero cloud dependencies</p>
+                </div>
+                <!-- Stat 3 -->
+                <div class="stat-counter-card">
+                    <span class="stat-num text-white">2021</span>
+                    <p class="stat-desc">Founded Infiposts Private Limited</p>
+                </div>
+                <!-- Stat 4 -->
+                <div class="stat-counter-card">
+                    <span class="stat-num text-orange">&infin;</span>
+                    <p class="stat-desc">Research and development spanning operating systems and robotics</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GET IN TOUCH / CTA SECTION -->
+    <section class="contact-cta-section" id="contact">
+        <div class="container text-center">
+            <span class="section-tag">GET IN TOUCH</span>
+            <h2 class="contact-title">Ready to build with Infiposts?</h2>
+            <p class="contact-subtitle">We partner with enterprises exploring automation, developers building on our platform, and teams looking to collaborate.</p>
+            <div class="contact-buttons-row">
+                <a href="contact.html" class="btn btn-primary btn-white" id="cta-contact-us">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="container footer-grid-layout">
+            <div class="footer-col-brand">
+                <div class="footer-powered-row">
+                    <img src="assets/logo.png" alt="Infiposts Logo" class="footer-mini-logo">
+                    <span class="footer-powered-text">Powered by Infiposts</span>
+                </div>
+                <p class="footer-tagline">Building the future of human-computer interaction.</p>
+                <div class="footer-socials">
+                    <a href="https://www.linkedin.com/company/infiposts-private-limited/" aria-label="LinkedIn" class="social-icon linkedin-social" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" style="margin-right:6px; vertical-align:middle;"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        LinkedIn
+                    </a>
+                    <a href="https://www.instagram.com/infipost" aria-label="Instagram" class="social-icon instagram-social" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" style="margin-right:6px; vertical-align:middle;"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        Instagram
+                    </a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <span class="footer-col-title">Products</span>
+                <a href="#entropyos" class="footer-link">EntropyOS</a>
+                <a href="#binary" class="footer-link">Binary</a>
+
+            </div>
+            <div class="footer-col">
+                <span class="footer-col-title">Resources</span>
+                <a href="#docs" class="footer-link">Documentation</a>
+                <a href="#api" class="footer-link">API Reference</a>
+                <a href="#status" class="footer-link">System Status</a>
+            </div>
+            <div class="footer-col">
+                <span class="footer-col-title">Company</span>
+                <a href="#about" class="footer-link">About Us</a>
+                <a href="#updates" class="footer-link">Product Updates</a>
+                <a href="#contact" class="footer-link">Contact</a>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p class="footer-copyright">&copy; 2026 Infiposts Private Limited - Bangalore</p>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript Code -->
+    <script src="main.js"></script>
 </body>
 </html>
